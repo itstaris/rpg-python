@@ -4,7 +4,7 @@ janela = Tk()
 
 janela.title("O ataque sabatico")
 
-janela.geometry("400x400" )
+janela.geometry("1000x600" )
 def next_scene():
     # Lógica para mudar para a próxima cena
     label.config(text="abacate")
