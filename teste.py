@@ -1,33 +1,32 @@
 import tkinter as tk
 
-def atualizar_texto():
-    global linha_atual
-    try:
-        with open('introdução.txt', 'r') as arquivo:
-            linhas = arquivo.readlines()
-            linha_atual += 1
-            if linha_atual >= len(linhas):
-                linha_atual = 0
-            label['text'] = linhas[linha_atual].strip()
-    except FileNotFoundError:
-        label['text'] = "Arquivo não encontrado!"
+# Função para ler o arquivo e armazenar as linhas
+def carregar_linhas(introdução.txt):
+    with open(introdução.txt, 'r', encoding="utf-8") as f:
+        return f.readlines()
 
-# Inicialização
+# Função para atualizar o label com a próxima linha
+def proxima_linha():
+    global linha_atual
+    if linha_atual < len(linhas):
+        label.config(text=linhas[linha_atual].strip())
+        linha_atual += 1
+
+# Carregar as linhas do arquivo
+linhas = carregar_linhas('C:/Users/202310164/Desktop/projeto python/rpg-python')
 linha_atual = 0
 
-# Cria a janela principal
+# Criar a janela principal
 janela = tk.Tk()
-janela.title("Leitor de Arquivo")
+janela.title("Leitor de Linhas")
 
-# Cria o rótulo
-label = tk.Label(janela, text="")
-label.pack()
+# Criar um label para exibir a linha
+label = tk.Label(janela, text=linhas[linha_atual].strip(), font=("Arial", 16))
+label.pack(pady=20)
 
-# Cria o botão
-botao = tk.Button(janela, text="Próxima Linha", command=atualizar_texto)
-botao.pack()
+# Criar um botão para mudar a linha
+botao = tk.Button(janela, text="Próxima linha", command=proxima_linha)
+botao.pack(pady=10)
 
-# Lê a primeira linha e atualiza o label
-atualizar_texto()
-
+# Iniciar o loop da interface
 janela.mainloop()
