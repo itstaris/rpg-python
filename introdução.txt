@@ -1,6 +1,0 @@
-Você dorme tranquilamente em sua cama confortável, até que seu sono é interrompido por barulhos na janela.
-É um pombo correio cutucando o vidro, você abre a janela e pega uma carta que ele te trouxe.
-“Olá, [player]! Você não vai acreditar no que aconteceu!! Semana passada participei de um sorteio de ingressos para o show do incrível bardo Raffa… acabei ganhando!!!!”
-“Tive muita sorte, milhares de pessoas estavam participando! Bem, não esperava menos considerando que Raffa é o bardo mais famoso do continente! Seu carisma é inigualável…”
-“Enfim, chega de enrolação. Estou enviando esta carta para convidar você a assistir o show comigo! Ele acontecerá daqui 3 dias, caso tenha interesse, me encontre no centro da cidade de Tulipos.”
-A carta está assinada por “Ana”, uma amiga sua de longa data. O que você vai fazer?
