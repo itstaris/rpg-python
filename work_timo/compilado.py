@@ -26,6 +26,8 @@ def updateText():
 
   global contador
   contador+=1
+  if contador==0:
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
 
   if contador==1:
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -78,20 +80,86 @@ def updateText():
   if contador==16:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-  # if contador==17:
+  if contador==17:
   
-  #   textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-  # if contador==18:
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    segundaEscolha()
+  if contador==18:
   
-  #   textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-  # if contador==19:
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    
+  if contador==19:
   
-  #   textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-  # if contador==20:
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==20:
   
-  #   textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-    # myLabel.configure(image=minhaImagem2)
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    
+  if contador==21:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==22:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    
+  if contador==23:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==24:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==25:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==26:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==27:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    bt_continuar.place_forget()
+    bt_comprar_curso.place(x=350, y=520)
+    bt_treta.place(x=750,y=520)
+  if contador==28:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==29:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==30:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==31:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==32:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==33:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==34:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==35:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==36:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==37:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==38:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==39:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    
+    
 
+#Primeiras opções
 def primeiraEscolha():
   bt_continuar.place_forget()
   bt_dormir.place(x=350, y=520)
@@ -99,7 +167,7 @@ def primeiraEscolha():
 
 def dormir():
   textoPrincipal.configure(text='Mesmo sendo uma oportunidade única, sua personalidade vagabunda e preguiçosa fala mais alta e você volta a dormir.')
-  bt_continuar.place(x=450, y=420)
+  bt_perdeu.place(x=450, y=420)
   bt_dormir.place_forget()
   bt_ir_ao_show.place_forget()
 
@@ -109,10 +177,39 @@ def irNoShow():
   bt_dormir.place_forget()
   bt_ir_ao_show.place_forget()
 
+#Segunda opções
+def segundaEscolha():
+  bt_continuar.place_forget()
+  bt_planice_verde.place(x=350, y=520)
+  bt_plantacao_milho.place(x=750,y=520)
+
+def planiceVerde():
+  # textoPrincipal.configure(text=f'PLANÍCIE ABERTA E VERDE')
+  bt_continuar.place(x=450, y=420)
+  bt_planice_verde.place_forget()
+  bt_plantacao_milho.place_forget()
+
+def plantacaoMilho():
+  global contador
+  # textoPrincipal.configure(text=f'CAMPO DE PLANTAÇÃO DE MILHO')
+  bt_continuar.place(x=450, y=420)
+  bt_planice_verde.place_forget()
+  bt_plantacao_milho.place_forget()
+   
+
+def comprar_curso():
+  global contador
+  bt_treta.place_forget()
+  bt_comprar_curso.place_forget()
+  textoPrincipal.configure(text=f'Wodak te convence e você gasta todo seu dinheiro comprando o curso. Sua lábia e persuasão são tão eficientes que te fizeram esquecer que não tem ovelhas. Parabéns, você comprou um curso inútil! [Curso inútil e pobreza adquiridos!]')
+  bt_continuar.place(x=450, y=420)
+  contador == 29
+  
 #Sistema de luta
 def tretando():
     bt_chute.place(x=250,y=450)
     bt_soco.place(x=750,y=450)
+    bt_comprar_curso.place_forget()
     bt_treta.place_forget()
     bt_continuar.place_forget()
     textoPrincipal.configure(text=f'Wodak esta na sua frente o que você faz?')  
@@ -122,8 +219,13 @@ def status_da_luta():
     if life > 0 and life_enemy <= 0:
         # print("Você ganhou!")
         textoPrincipal.configure(text=f'Você ganhou!')
+        bt_chute.place_forget()
+        bt_soco.place_forget()
+        bt_continuar.place(x=450, y=420)
+        contador == 29
     elif life <= 0:
         textoPrincipal.configure(text=f'Você perdeu!')
+        bt_perdeu.place(x=800, y=100)
     # else:
     #     textP.configure(text=f'O jogo continua')
     Vidas = Label(menu,text=f'Sua vida:{life} Vida do inimigo:{life_enemy}')
@@ -163,21 +265,29 @@ def chutar():
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()  
     
+
+
 #Botoes do sistema de luta
 bt_soco=Button(menu,text="soco", command=socar)
 bt_chute=Button(menu,text="chute", command=chutar)
 bt_treta=Button(menu,text="treta", command=tretando)
-bt_treta.place(x=400,y=400)
+
 
 #Botoes de escolhas
 bt_dormir = Button(menu, text='Voltar a dormir',command=dormir)
 bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow)
+bt_planice_verde = Button(menu,text=f'Planices verdes',command=planiceVerde)
+bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho)
 
+#Botoes de subescolha
+bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso)
 
 #Botao principal
 bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="")
 bt_continuar.place(x=450, y=420)
+bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit)
 
-textoPrincipal = Label(menu,text="oiii",font=("Arial", 12),wraplength=300)
+
+textoPrincipal = Label(menu,text="INTRODUÇÃO",font=("Arial", 12),wraplength=300)
 textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
 menu.mainloop()
