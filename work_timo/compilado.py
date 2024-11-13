@@ -114,12 +114,13 @@ def updateText():
   if contador==26:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-  if contador==27:
-  
-    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     bt_continuar.place_forget()
     bt_comprar_curso.place(x=350, y=520)
     bt_treta.place(x=750,y=520)
+  if contador==27:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+
   if contador==28:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -138,6 +139,9 @@ def updateText():
   if contador==33:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    bt_continuar.place_forget()
+    bt_comer_milho.place(x=350,y=520)
+    bt_recusar_milho.place(x=750,y=520)
   if contador==34:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -154,6 +158,68 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
   if contador==39:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==40:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==41:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==42:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    bt_continuar.place_forget()
+    bt_charada_errado1.place(x=500,y=400)
+    bt_charada_errado2.place(x=700,y=400)
+    bt_charada_certa.place(x=500,y=500)
+    bt_recorrer_a_violencia.place(x=700,y=500)
+  if contador==43:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==44:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==45:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==46:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==47:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==48:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==49:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==50:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==51:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==52:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==53:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==54:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==55:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==56:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==57:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==58:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     
@@ -184,18 +250,56 @@ def segundaEscolha():
   bt_plantacao_milho.place(x=750,y=520)
 
 def planiceVerde():
-  # textoPrincipal.configure(text=f'PLANÍCIE ABERTA E VERDE')
+  textoPrincipal.configure(text=f'PLANÍCIE ABERTA E VERDE')
   bt_continuar.place(x=450, y=420)
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
 
 def plantacaoMilho():
   global contador
-  # textoPrincipal.configure(text=f'CAMPO DE PLANTAÇÃO DE MILHO')
+  textoPrincipal.configure(text=f'CAMPO DE PLANTAÇÃO DE MILHO')
   bt_continuar.place(x=450, y=420)
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
-   
+  contador += 10
+def comerMilho():
+  bt_recusar_milho.place_forget()
+  bt_comer_milho.place_forget()
+  bt_continuar.place(x=450, y=420)
+  textoPrincipal.configure(text=f'Você e Ana aceitam e Jullin fica muito feliz. Vocês comem um milho. Dois, três, quatro… Vocês se entopem de milho o suficiente para perderem as contas. Jullin realmente faz um milho delícia.')
+def recusarMilho():
+  bt_recusar_milho.place_forget()
+  bt_comer_milho.place_forget()
+  bt_continuar.place(x=450, y=420)
+  textoPrincipal.configure(text=f'Você não tem tempo para perder com um caipira aleatório e recusa seu delicioso milho. Parabéns, você chateou um caipira triste!')
+
+#Ponte opçoes
+def errado():
+  textoPrincipal.configure(text=f'Jânovisk: Não não não. Completamente errado.')
+  bt_continuar.place(x=450, y=420)
+  bt_charada_errado1.place_forget()
+  bt_charada_errado2.place_forget()
+  bt_charada_certa.place_forget()
+  bt_recorrer_a_violencia.place_forget()
+
+def recorrerAviolencia():
+  textoPrincipal.configure(text=f'Você sabe que a violência nunca é a resposta, ela é a pergunta. E a resposta é sim. Em um pulo, você tenta atacar o grande goblin. Porém, com apenas uma mão, Jânovisk te segura pelo pescoço e o quebra sem qualquer esforço. Parabéns, você morreu nas mãos de um goblin preguiçoso!')
+  global contador
+  bt_perdeu.place(x=450, y=420)
+  bt_charada_errado1.place_forget()
+  bt_charada_errado2.place_forget()
+  bt_charada_certa.place_forget()
+  bt_recorrer_a_violencia.place_forget()
+  contador += 7
+def acertou():  
+  global contador
+  textoPrincipal.configure(text=f'Jânovisk: É isso, acertou. Podem seguir seu caminho. Se sobreviverem…')
+  bt_continuar.place(x=450, y=420)
+  bt_charada_errado1.place_forget()
+  bt_charada_errado2.place_forget()
+  bt_charada_certa.place_forget()
+  bt_recorrer_a_violencia.place_forget()
+  contador += 7
 
 def comprar_curso():
   global contador
@@ -203,7 +307,7 @@ def comprar_curso():
   bt_comprar_curso.place_forget()
   textoPrincipal.configure(text=f'Wodak te convence e você gasta todo seu dinheiro comprando o curso. Sua lábia e persuasão são tão eficientes que te fizeram esquecer que não tem ovelhas. Parabéns, você comprou um curso inútil! [Curso inútil e pobreza adquiridos!]')
   bt_continuar.place(x=450, y=420)
-  contador == 29
+  contador += 7
   
 #Sistema de luta
 def tretando():
@@ -279,15 +383,21 @@ bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow)
 bt_planice_verde = Button(menu,text=f'Planices verdes',command=planiceVerde)
 bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho)
 
+
 #Botoes de subescolha
 bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso)
-
+bt_comer_milho = Button(menu,text=f'Comer milho',command=comerMilho)
+bt_recusar_milho = Button(menu,text=f'Recusar milho',command=recusarMilho)
+bt_charada_errado1 = Button(menu,text="Março",command=errado)
+bt_charada_errado2 = Button(menu,text="Julho",command=errado)
+bt_charada_certa = Button(menu,text=f'Mary',command=acertou)
+bt_recorrer_a_violencia = Button(menu,text=f'Atacar janovisk',command=recorrerAviolencia)
 #Botao principal
 bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="")
 bt_continuar.place(x=450, y=420)
 bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit)
 
 
-textoPrincipal = Label(menu,text="INTRODUÇÃO",font=("Arial", 12),wraplength=300)
+textoPrincipal = Label(menu,text="INTRODUÇÃO",font=("Arial", 12),wraplength=300,justify="left")
 textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
 menu.mainloop()

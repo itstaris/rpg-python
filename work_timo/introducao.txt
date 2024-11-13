@@ -16,7 +16,6 @@ Ana: Eai, animado pro show???
 Ana: É isso aí! Mas deu de lenga-lenga, porque temos um grande caminho pela frente.
 Ana: Pelo que vi no mapa, temos duas opções de caminho para seguir.
 Ela mostra o mapa para você.
-PLANÍCIE ABERTA E VERDE
 Você e Ana caminham então para a vasta planície verde. E realmente, ela é muito verde!
 Tudo parece tranquilo, até vocês ouvirem alguém se aproximando.
 ???: OLÁ, PESSOAS! Quero um pouco da atenção de vocês, por favor
@@ -26,7 +25,32 @@ Ana: Ovelhas? Por que ovel-
 Wodak: Ovelhas estão muito populares no mercado!! Quem tem um rebanho delas ganha uma baita grana. Tenho um amigo que trabalha na Sheeps S.A. e ganha mais de mil ouros por dia…
 Wodak incansavelmente fala sobre ovelhas. Você não tem ideia do que ele está falando, mas estranhamente se sente muito envolvido em sua conversa.
 Wodak: Se quiserem um futuro promissor assim, estou oferecendo um curso de como cuidar de ovelhas. Se comprarem agora posso fazer no precinho!
-aparecer q ganhou
-aparecer q ganhou2
-aparecer q ganhou3
-aparecer q ganhou4
+Você e Ana caminham então pelo campo de plantação de milhos, uma área tranquila cheia de humildes agricultores.
+Andando bastante, encontram um esguio fazendeiro cuidando de sua plantação.
+[???]: Olá, viajantes! Prazer, eu sou o Jullin. Que incomum ver pessoas andando por aqui…
+Jullin fala de forma lenta e calma. Mesmo parecendo ser introvertido, ele exala simpatia.
+Ana: Prazer, Meu nome é Ana e esse é o Thiago. Estamos indo a Itapisópolis.
+Jullin: Itapisópolis?? Fiquei sabendo que vai rolar um evento dos grandes lá.
+Jullin: Bem, vocês parecem cansados… gostariam de comer um pouco dos meus milhos? Sempre bom fazer uma pausa para encher o buchin…
+PONTE DO GOBLIN
+Vocês adentram uma densa floresta mágica, conhecida pela presença de várias criaturas exóticas e diferenciadas.
+Aproximando-se de um riacho, percebem que há uma ponte que o corta, aparentemente o único meio de atravessar para o outro lado.
+[???]: Se os forasteiros quiserem atravessar, terão que responder minha charada.
+Vocês escutam uma voz mansa e grave vinda da ponte. É de um grande goblin que desenha tranquilo em seu pequeno caderno.
+Ana: Quem é você?
+[???]: Sou Jânovisk, protetor desta ponte e guardião da floresta.
+Ele diz isso enquanto faz um desenho grotesco e com muito sangue. Ele parece feliz com o resultado.
+Jânovisk: A charada é a seguinte a mãe de Mary teve quatro filhos. Abril, Maio e Junho foram os três primeiros. Qual o nome da 4ª criança?
+Jânovisk continua a desenhar de boa sem nem olhar para vocês.
+Ana: …
+[Player]: ….
+Jânovisk: …..
+[Player]: Tá… então a gente não pode passar?
+Jânovisk: Hãã.. ah, sei lá. Façam o que quiserem, sou pago só para fazer charadas, não para impedir que passem na ponte.
+Você e Ana se entreolham confusos e atravessam a ponte mesmo assim.
+conlcuido 1
+conlcuido 2
+conlcuido 3
+conlcuido 4
+conlcuido 5
+conlcuido 6
