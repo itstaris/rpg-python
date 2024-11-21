@@ -21,6 +21,8 @@ probabilidade_soco = 0.8
 probabilidade_chute = 0.5
 life = 10
 life_enemy = 10
+life_boss = 999
+tempo_de_espera = 10
 #Texto principal com o sisstema
 def updateText():
 
@@ -276,9 +278,12 @@ def updateText():
   if contador==75:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    esperando()
+    bt_continuar.place_forget()
   if contador==76:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    txt_de_espera.place_forget()
   if contador==77:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -289,6 +294,43 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
   if contador==80:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==81:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==82:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==83:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==84:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==85:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==86:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==87:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==88:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==89:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==90:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    luta_final()
+  if contador==91:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==92:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     
@@ -395,6 +437,8 @@ def status_da_luta():
         bt_continuar.place(x=450, y=420)
         contador == 29
     elif life <= 0:
+        bt_chute.place_forget()
+        bt_soco.place_forget()
         textoPrincipal.configure(text=f'Você perdeu!')
         bt_perdeu.place(x=800, y=100)
     # else:
@@ -435,7 +479,67 @@ def chutar():
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()  
-    
+
+
+#luta com o chefao final
+def luta_final():
+  global life
+  life=10
+  bt_luta_final.place_forget()
+  bt_continuar.place_forget()
+  bt_rasteira2.place(x=250,y=450)
+  bt_peteleco2.place(x=750,y=450)
+  textoPrincipal.configure(text=f'O grande demonio esta a sua frente o que você faz?')
+
+def status_do_boss():
+  global life, life_boss
+  if life > 0 and life_boss <= 0:
+    bt_rasteira2.place_forget()
+    bt_peteleco2.place_forget() 
+    bt_caixa_dagua.place_forget()
+    bt_continuar.place(x=450, y=420)
+  elif life <= 0:
+    bt_rasteira2.place_forget()
+    bt_peteleco2.place_forget()
+    textoPrincipal.configure(text=f'Você perdeu!')
+    bt_perdeu.place(x=800, y=100)
+  elif life >= 3:
+    bt_caixa_dagua.place(x=500,y=400)
+
+  Vidas = Label(menu,text=f'Sua vida:{life} Vida do inimigo:{life_boss}')
+  Vidas.place(x=100,y=100)
+def rasteira2():
+    global life, life_boss
+    if random.random() < probabilidade_chute:
+        dano = random.randint(2,8)
+        life_boss -= dano
+        textoPrincipal.configure(text=f'Vc deu uma rasteira no inimigo e deu {dano} de dano, porém ela cospe em vc e da 3 de dano')
+        life -= 3 
+        status_da_luta()
+    else:
+        textoPrincipal.configure(text=f'Você errouu e ainda uma catarrada de fogo. *-3 de vida')
+        life -= 3
+        status_da_luta()
+def peteleco2():
+    global life, life_boss
+    if random.random() < probabilidade_soco:
+        dano = random.randint(1,4)
+        life_boss -= dano
+        textoPrincipal.configure(text=f'Vc deu um peteleco no inimigo e deu {dano} de dano, porém ela cospe em vc e da 3 de dano')
+        life -= 3 
+        status_da_luta()
+    else:
+        textoPrincipal.configure(text=f'Você errouu e ainda uma catarrada de fogo. *-3 de vida')
+        life -= 3
+        status_da_luta()    
+def caixa_dagua():
+  global life,life_boss
+  dano = 100000
+  life_boss -= dano
+  textoPrincipal.configure(text=f"Você pega a super caixa d'agua e arremessa no grande demonio e derrota ela ")
+
+
+
 #terceira opçao
 def terceiraEscolha():
   bt_continuar.place_forget()
@@ -454,6 +558,19 @@ def romania():
   bt_continuar.place(x=450, y=420)
   bt_therezoca.place_forget()
   bt_romania.place_forget()
+
+def esperando():
+  global tempo_de_espera
+  tempo_de_espera=tempo_de_espera-1
+  txt_de_espera.place(x=100,y=100)
+  if tempo_de_espera<0:
+    return
+  textoPrincipal.config(text=str(tempo_de_espera))
+  textoPrincipal.after(1000,esperando)
+  if tempo_de_espera == 0:
+    bt_continuar.place(x=450, y=420)
+    txt_de_espera.place_forget()
+
 
 #Botoes do sistema de luta
 bt_soco=Button(menu,text="soco", command=socar)
@@ -484,6 +601,12 @@ bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="")
 bt_continuar.place(x=450, y=420)
 bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit)
 
+txt_de_espera = Label (menu,text="Agora vc deve esperar o tempo passar")
+
+bt_luta_final = Button(menu,text="Treta final",command=luta_final)
+bt_rasteira2 = Button(menu,text="Rasteira",command=rasteira2)
+bt_peteleco2 = Button(menu,text="Peteleco",command=peteleco2)
+bt_caixa_dagua = Button(menu,text="SUPER CAIXA D'ÁGUA",command=caixa_dagua)
 
 textoPrincipal = Label(menu,text="INTRODUÇÃO",font=("Arial", 12),wraplength=300,justify="left")
 textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
