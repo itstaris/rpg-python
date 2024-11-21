@@ -222,7 +222,75 @@ def updateText():
   if contador==58:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-    
+  
+  if contador==59:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==60:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==61:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    terceiraEscolha()
+  if contador==62:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==63:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==64:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==65:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==66:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==67:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+    contador += 10
+  if contador==68:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==69:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==70:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==71:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==72:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==73:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==74:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==75:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==76:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==77:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==78:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==79:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
+  if contador==80:
+  
+    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     
 
 #Primeiras opções
@@ -281,7 +349,6 @@ def errado():
   bt_charada_errado2.place_forget()
   bt_charada_certa.place_forget()
   bt_recorrer_a_violencia.place_forget()
-
 def recorrerAviolencia():
   textoPrincipal.configure(text=f'Você sabe que a violência nunca é a resposta, ela é a pergunta. E a resposta é sim. Em um pulo, você tenta atacar o grande goblin. Porém, com apenas uma mão, Jânovisk te segura pelo pescoço e o quebra sem qualquer esforço. Parabéns, você morreu nas mãos de um goblin preguiçoso!')
   global contador
@@ -369,7 +436,24 @@ def chutar():
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()  
     
+#terceira opçao
+def terceiraEscolha():
+  bt_continuar.place_forget()
+  bt_therezoca.place(x=350, y=520)
+  bt_romania.place(x=750, y=520)
 
+def therezoca():
+  bt_continuar.place(x=450, y=420)
+  bt_therezoca.place_forget()
+  bt_romania.place_forget()
+
+def romania():
+  global contador
+  contador += 6
+  textoPrincipal.configure(text='LABIRINTO DE ROMANIA')
+  bt_continuar.place(x=450, y=420)
+  bt_therezoca.place_forget()
+  bt_romania.place_forget()
 
 #Botoes do sistema de luta
 bt_soco=Button(menu,text="soco", command=socar)
@@ -382,7 +466,8 @@ bt_dormir = Button(menu, text='Voltar a dormir',command=dormir)
 bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow)
 bt_planice_verde = Button(menu,text=f'Planices verdes',command=planiceVerde)
 bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho)
-
+bt_therezoca = Button(menu,text='Ruínas de Therezoca',command=therezoca)
+bt_romania = Button(menu,text='Labirinto de Romania',command=romania)
 
 #Botoes de subescolha
 bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso)
@@ -392,6 +477,8 @@ bt_charada_errado1 = Button(menu,text="Março",command=errado)
 bt_charada_errado2 = Button(menu,text="Julho",command=errado)
 bt_charada_certa = Button(menu,text=f'Mary',command=acertou)
 bt_recorrer_a_violencia = Button(menu,text=f'Atacar janovisk',command=recorrerAviolencia)
+
+
 #Botao principal
 bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="")
 bt_continuar.place(x=450, y=420)

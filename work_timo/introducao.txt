@@ -1,7 +1,7 @@
-introduçao
+introdução
 Você dorme tranquilamente em sua cama confortável, até que seu sono é interrompido por barulhos na janela.
 É um pombo correio cutucando o vidro, você abre a janela e pega uma carta que ele te trouxe
-“Olá, [player]! Você não vai acreditar no que aconteceu!! Semana passada participei de um sorteio de ingressos para o show do incrível bardo Raffa… acabei ganhando!!!!”
+“Olá, Thiago! Você não vai acreditar no que aconteceu!! Semana passada participei de um sorteio de ingressos para o show do incrível bardo Raffa… acabei ganhando!!!!”
 “Tive muita sorte, milhares de pessoas estavam participando! Bem, não esperava menos considerando que Raffa é o bardo mais famoso do continente! Seu carisma é inigualável…”
 “Enfim, chega de enrolação. Estou enviando esta carta para convidar você a assistir o show comigo! Ele acontecerá daqui 3 dias, caso tenha interesse, me encontre no centro da cidade de Tulipos.”
 A carta está assinada por “Ana”, uma amiga sua de longa data. O que você vai fazer?
@@ -9,10 +9,10 @@ Você pega suas coisas e vai até Tulipos, a cidade das flores.
 TULIPOS
 Você enfim chega na cidade das flores. Ela não é conhecida assim a toa, em todos os cantos é possível ver uma infinidade de flores e outras plantas.
 Ao explorar várias ruas coloridas e cheias de vida, você encontra a praça central da cidade.
-Ana: [player]! Estou aqui!
+Ana: Thiago! Estou aqui!
 Você avista sua amiga de longa data sentada desenhando ao lado de uma grande fonte de água. Chegando mais perto é possível ver que ela estava rabiscando coisas ao seu redor.
 Ana: Eai, animado pro show???
-[Player]: Com certeza!! Realmente foi muita cagada você ter conseguido ganhar os ingressos, os perdedores que lutem.
+Thiago: Com certeza!! Realmente foi muita cagada você ter conseguido ganhar os ingressos, os perdedores que lutem.
 Ana: É isso aí! Mas deu de lenga-lenga, porque temos um grande caminho pela frente.
 Ana: Pelo que vi no mapa, temos duas opções de caminho para seguir.
 Ela mostra o mapa para você.
@@ -43,14 +43,38 @@ Ele diz isso enquanto faz um desenho grotesco e com muito sangue. Ele parece fel
 Jânovisk: A charada é a seguinte a mãe de Mary teve quatro filhos. Abril, Maio e Junho foram os três primeiros. Qual o nome da 4ª criança?
 Jânovisk continua a desenhar de boa sem nem olhar para vocês.
 Ana: …
-[Player]: ….
+Thiago: ….
 Jânovisk: …..
-[Player]: Tá… então a gente não pode passar?
+Thiago: Tá… então a gente não pode passar?
 Jânovisk: Hãã.. ah, sei lá. Façam o que quiserem, sou pago só para fazer charadas, não para impedir que passem na ponte.
 Você e Ana se entreolham confusos e atravessam a ponte mesmo assim.
-conlcuido 1
-conlcuido 2
-conlcuido 3
-conlcuido 4
-conlcuido 5
-conlcuido 6
+GURU
+Seguindo seu caminho, vocês decidem descansar um pouco em uma taverna que encontraram na estrada.
+O que seria apenas um copo de bebida, acabou sendo mais de 20.
+[Cirrose adquirida!]
+Depois de uma forte ressaca, você e Ana acordam jogados em uma floresta desconhecida. Sua cabeça gira, mas você consegue perceber que está ao lado de uma cachoeira.
+[???]: Que deselegante os senhores jogados assim.
+Thiago: Quem está aí??
+Você vê uma sofisticada elfa sentada em uma pedra ao lado da cachoeira. Por alguma razão ela está tomando uma taça de vinho no meio da floresta.
+[???]: Prazer, sou Marilovis. Estava fazendo minha caminhada matinal quando vi os senhores completamente bêbados aqui jogados. Bebam a água da cachoeira, devem estar com sede.
+Ana: Ai, minha cabeça! Não tenho ideia de onde estamos… Você sabe onde fica Itapisópolis?
+Marilovis: Ah já sei, estão indo para lá por conta do grande show do bardo Raffa, certo? Que gosto refinado, meus caros… Bem, estamos agora na floresta Lemeni, há dois caminhos que poderão seguir.
+Marilovis: O primeiro são as Ruínas de Therezoca, uma rota tumultuosa e perigosa, porém curta. Já o segundo é o Labirinto de Romania, bem longo, mas seguro. Tenho um velho conhecido que pode guiá-los pelo labirinto.
+RUÍNAS DE THEREZOCA
+Vocês caminham pelas hostis ruínas, enfrentando vários monstros e outras criaturas perigosas genéricas. O céu escuro e os destroços de construções tornam o cenário apocalíptico e intimidador.
+Com muito esforço, vocês conseguem atravessar o caminho com vida, até que rapidamente.
+Ana: Ok, acho que não foi tão ruim assim.
+Ana diz isso após seu dedo mindinho ter sido decepado. Ela tranquilamente trata de seu ferimento e vocês voltam a seguir seu caminho.
+Vocês chegam na frente do grande labirinto, suas paredes altas e cheias de musgo os impedem de ver o outro lado. Há um pequeno troll de aparência rabugenta sentado na entrada.
+Thiago: Saudações! Você é o antigo conhecido da Marilovis?
+[???]: Sou Abel. Quem chega?
+Ana: Olá, somos aventureiros e estamos indo para Itapisópolis. Acabamos encontrando Mariloves pela jornada e ela disse que havia alguém que poderia nos ajudar a passar pelo labirinto.
+Abel: Que folga…
+Abel os olha com desdém.
+Abel: A vida tá fácil assim, é? Vamos logo.
+Ainda que mal humorado, Abel ainda possui um carisma que conquista você. Os três andam pelo vasto labirinto enquanto conversam sobre a vida e questões filosóficas.
+Por mais que o assunto seja interessante, você sente que a conversa não acaba nunca.
+finalizado 1
+finalizado 2 
+finalizado 3
+finalizado 4
