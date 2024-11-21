@@ -60,7 +60,6 @@ Você vê uma sofisticada elfa sentada em uma pedra ao lado da cachoeira. Por al
 Ana: Ai, minha cabeça! Não tenho ideia de onde estamos… Você sabe onde fica Itapisópolis?
 Marilovis: Ah já sei, estão indo para lá por conta do grande show do bardo Raffa, certo? Que gosto refinado, meus caros… Bem, estamos agora na floresta Lemeni, há dois caminhos que poderão seguir.
 Marilovis: O primeiro são as Ruínas de Therezoca, uma rota tumultuosa e perigosa, porém curta. Já o segundo é o Labirinto de Romania, bem longo, mas seguro. Tenho um velho conhecido que pode guiá-los pelo labirinto.
-RUÍNAS DE THEREZOCA
 Vocês caminham pelas hostis ruínas, enfrentando vários monstros e outras criaturas perigosas genéricas. O céu escuro e os destroços de construções tornam o cenário apocalíptico e intimidador.
 Com muito esforço, vocês conseguem atravessar o caminho com vida, até que rapidamente.
 Ana: Ok, acho que não foi tão ruim assim.
