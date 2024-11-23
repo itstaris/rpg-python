@@ -1,6 +1,7 @@
 from tkinter import *
 import time
 import random
+from customtkinter import *
 
 #configuraçoes da janela
 menu = Tk()   
@@ -145,8 +146,8 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     bt_continuar.place_forget()
-    bt_comer_milho.place(x=350,y=520)
-    bt_recusar_milho.place(x=750,y=520)
+    bt_comer_milho.place(relx=0.33, rely=0.7, anchor="center")
+    bt_recusar_milho.place(relx=0.66, rely=0.7, anchor="center")
   if contador==34:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -370,14 +371,14 @@ def segundaEscolha():
   bt_plantacao_milho.place(relx=0.66, rely=0.7, anchor="center")
 
 def planiceVerde():
-  textoPrincipal.configure(text=f'PLANÍCIE ABERTA E VERDE')
+  textoPrincipal.configure(text=f'[PLANÍCIE ABERTA E VERDE]')
   bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
 
 def plantacaoMilho():
   global contador
-  textoPrincipal.configure(text=f'CAMPO DE PLANTAÇÃO DE MILHO')
+  textoPrincipal.configure(text=f'[CAMPO DE PLANTAÇÃO DE MILHO]')
   bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
@@ -445,6 +446,7 @@ def status_da_luta():
         textoPrincipal.configure(text=f'Você dá um sarrafo em Wodak e ganha a luta! Felizmente não caiu na lábia de um desconhecido...')
         bt_chute.place_forget()
         bt_soco.place_forget()
+        Vidas.place_forget()
         
         bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
         menu.update_idletasks()
@@ -453,7 +455,7 @@ def status_da_luta():
     elif life <= 0:
         bt_chute.place_forget()
         bt_soco.place_forget()
-        textoPrincipal.configure(text=f'Você perdeu!')
+        textoPrincipal.configure(text=f'Você e Ana apanharam feio de Wodak. Quem diria que perderiam para um cara desses.')
         bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
     # else:
     #     textP.configure(text=f'O jogo continua')
@@ -466,7 +468,7 @@ def socar():
         dano = random.randint(1,4)
         life_enemy -= dano
         # print(f'voce acertou o inimigo e deu {dano} de dano')
-        textoPrincipal.configure(text=f'Você deu um soco no inimigo e deu {dano} de dano, porém ele revida e dá 2 de dano!')
+        textoPrincipal.configure(text=f'Você dá um soco no inimigo e o tira {dano} de vida, porém ele revida e dá 2 de dano!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()
@@ -492,8 +494,7 @@ def chutar():
         textoPrincipal.configure(text=f'Você erra e ainda leva um tapa do Wodak, perdendo 2 de vida!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
-        status_da_luta()  
-
+        status_da_luta()
 
 #luta com o chefao final
 def luta_final():
@@ -504,7 +505,7 @@ def luta_final():
   bt_rasteira2.place(relx=0.33, rely=0.7, anchor="center")
   bt_peteleco2.place(relx=0.66, rely=0.7, anchor="center")
   # bt_caixa_dagua.place(x=500,y=500)
-  textoPrincipal.configure(text=f'O grande demonio esta a sua frente o que você faz?')
+  textoPrincipal.configure(text=f'O grande demônio está a sua frente, o que você faz?')
   menu.update_idletasks()
 
 
@@ -552,7 +553,7 @@ def peteleco2():
         life -= 3 
         status_do_boss()
     else:
-        textoPrincipal.configure(text=f'Você errouu e ainda levou uma catarrada de fogo, perdendo 3 de vida!')
+        textoPrincipal.configure(text=f'Você erra e ainda levou uma catarrada de fogo, perdendo 3 de vida!')
         life -= 3
         status_do_boss()    
 
@@ -574,7 +575,7 @@ def terceiraEscolha():
 
 def therezoca():
   global contador
-  textoPrincipal.configure(text=f'RUÍNAS DE THEREZOCA')
+  textoPrincipal.configure(text=f'[RUÍNAS DE THEREZOCA]')
   bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_therezoca.place_forget()
   bt_romania.place_forget()
@@ -582,7 +583,7 @@ def therezoca():
 def romania():
   global contador
   contador += 6
-  textoPrincipal.configure(text='LABIRINTO DE ROMANIA')
+  textoPrincipal.configure(text='[LABIRINTO DE ROMANIA]')
   bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_therezoca.place_forget()
   bt_romania.place_forget()
@@ -601,40 +602,40 @@ def esperando():
 
 
 #Botoes do sistema de luta
-bt_soco=Button(menu,text="soco", command=socar, font=("Cambria", 14), bg="#272022", fg="white")
-bt_chute=Button(menu,text="chute", command=chutar, font=("Cambria", 14), bg="#272022", fg="white")
-bt_treta=Button(menu,text="treta", command=tretando, font=("Cambria", 14), bg="#272022", fg="white")
+bt_soco=Button(menu,text="Soco", command=socar, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_chute=Button(menu,text="Chute", command=chutar, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_treta=Button(menu,text="Recusar", command=tretando, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 
 
 #Botoes de escolhas
-bt_dormir = Button(menu, text='Voltar a dormir',command=dormir, font=("Cambria", 14), bg="#272022", fg="white")
-bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow, font=("Cambria", 14), bg="#272022", fg="white")
-bt_planice_verde = Button(menu,text=f'Planícies verdes',command=planiceVerde, font=("Cambria", 14), bg="#272022", fg="white")
-bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho, font=("Cambria", 14), bg="#272022", fg="white")
-bt_therezoca = Button(menu,text='Ruínas de Therezoca',command=therezoca, font=("Cambria", 14), bg="#272022", fg="white")
-bt_romania = Button(menu,text='Labirinto de Romania',command=romania, font=("Cambria", 14), bg="#272022", fg="white")
+bt_dormir = Button(menu, text='Voltar a dormir',command=dormir, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_planice_verde = Button(menu,text=f'Planícies verdes',command=planiceVerde, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_therezoca = Button(menu,text='Ruínas de Therezoca',command=therezoca, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_romania = Button(menu,text='Labirinto de Romania',command=romania, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 
 #Botoes de subescolha
-bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso, font=("Cambria", 14), bg="#272022", fg="white")
-bt_comer_milho = Button(menu,text=f'Comer milho',command=comerMilho, font=("Cambria", 14), bg="#272022", fg="white")
-bt_recusar_milho = Button(menu,text=f'Recusar milho',command=recusarMilho, font=("Cambria", 14), bg="#272022", fg="white")
-bt_charada_errado1 = Button(menu,text="Março",command=errado, font=("Cambria", 14), bg="#272022", fg="white")
-bt_charada_errado2 = Button(menu,text="Julho",command=errado, font=("Cambria", 14), bg="#272022", fg="white")
-bt_charada_certa = Button(menu,text=f'Mary',command=acertou, font=("Cambria", 14), bg="#272022", fg="white")
-bt_recorrer_a_violencia = Button(menu,text=f'Atacar janovisk',command=recorrerAviolencia, font=("Cambria", 14), bg="#272022", fg="white")
+bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_comer_milho = Button(menu,text=f'Comer milho',command=comerMilho, font=("Cambria", 14), bg="#272022", fg="white",  width=25, pady=6)
+bt_recusar_milho = Button(menu,text=f'Recusar milho',command=recusarMilho, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_charada_errado1 = Button(menu,text="Março",command=errado, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_charada_errado2 = Button(menu,text="Julho",command=errado, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_charada_certa = Button(menu,text=f'Mary',command=acertou, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_recorrer_a_violencia = Button(menu,text=f'Atacar janôvisk',command=recorrerAviolencia, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 
 
 #Botao principal
 bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="", font=("Cambria", 14), bg="#272022", fg="white", padx=30, pady=5)
 bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
-bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit, font=("Cambria", 14), bg="#272022", fg="white", padx=5)
+bt_perdeu = Button(menu,text=f'Fim',command=menu.quit, font=("Cambria", 14), bg="#272022", fg="white", padx=30, pady=5)
 
-txt_de_espera = Label (menu,text="Agora vc deve esperar o tempo passar")
+txt_de_espera = Label(menu,text="O caminho é tão longo que chega a ser interminável.", font=("Georgia", 12), wraplength=500, justify="center")
 
 bt_luta_final = Button(menu,text="Treta final",command=luta_final)
-bt_rasteira2 = Button(menu,text="Rasteira",command=rasteira2)
-bt_peteleco2 = Button(menu,text="Peteleco",command=peteleco2)
-bt_caixa_dagua = Button(menu,text="SUPER CAIXA D'ÁGUA",command=caixa_dagua)
+bt_rasteira2 = Button(menu,text="Rasteira",command=rasteira2, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_peteleco2 = Button(menu,text="Peteleco",command=peteleco2, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
+bt_caixa_dagua = Button(menu,text="SUPER CAIXA D'ÁGUA",command=caixa_dagua, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 
 def skip():
   global contador
@@ -643,6 +644,6 @@ bt_skip= Button(menu,text="skip",command=skip)
 bt_skip.place(x=900,y=100)
 
 
-textoPrincipal = Label(menu,text="O INÍCIO",font=("Georgia", 16),wraplength=500,justify="center")
+textoPrincipal = Label(menu,text="[O INÍCIO]",font=("Georgia", 16),wraplength=500,justify="center")
 textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
 menu.mainloop()

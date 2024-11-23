@@ -3,8 +3,8 @@ Você dorme tranquilamente em sua cama confortável, até que seu sono é interr
 É um pombo correio cutucando o vidro, você abre a janela e pega uma carta que ele te trouxe.
 “Olá, Thiago! Você não vai acreditar no que aconteceu!! Semana passada participei de um sorteio de ingressos para o show do incrível bardo Raffa… acabei ganhando!!!!”
 “Tive muita sorte, milhares de pessoas estavam participando! Bem, não esperava menos considerando que Raffa é o bardo mais famoso do continente! Seu carisma é inigualável…”
-“Enfim, chega de enrolação. Estou enviando esta carta para convidar você a assistir o show comigo! Ele acontecerá daqui 3 dias, caso tenha interesse, me encontre no centro da cidade de Tulipos.”
-A carta está assinada por “Ana”, uma amiga sua de longa data. O que você vai fazer?
+“Enfim, chega de enrolação. Estou enviando esta carta para convidar você a assistir o show comigo! Ele acontecerá daqui 3 dias, caso tenha interesse, me encontre no centro da cidade de Tulipos.” -Ana, sua querida amiga :)
+Você olha para seu pôster de colecionador de Raffa e isso te enche de determinação.
 Você pega suas coisas e vai até Tulipos, a cidade das flores.
 [TULIPOS]
 Você enfim chega na cidade das flores. Ela não é conhecida assim a toa, em todos os cantos é possível ver uma infinidade de flores e outras plantas.
@@ -18,7 +18,7 @@ Ana: Pelo que vi no mapa, temos duas opções de caminho para seguir.
 Ela mostra o mapa para você.
 Você e Ana caminham então para a vasta planície verde. E realmente, ela é muito verde!
 Tudo parece tranquilo, até vocês ouvirem alguém se aproximando.
-???: OLÁ, PESSOAS! Quero um pouco da atenção de vocês, por favor
+???: OLÁ, PESSOAS! Quero um pouco da atenção de vocês, por favor.
 Vocês vêem um homem magro e de aparência meio doente acenando para vocês.
 ???: Meu nome é Wodak, prazer em conhecê-los! Gostaria de saber, vocês gostam de ovelhas??
 Ana: Ovelhas? Por que ovel-
@@ -84,8 +84,8 @@ Vocês curtem ao máximo o espetáculo de Raffa. Ele toca as clássicas “Sou d
 ???: BOA NOITE, VERMES!!!!
 Olhando com mais atenção, você percebe que a criatura no céu é a grande demônia Sabba, a degoladora.
 Sabba: QUEM FOI O INSOLENTE QUE ROUBOU O MEU INGRESSO??? ERA PARA EU TER GANHADO O SORTEIO!!!!
-Sabba cospe fogo para todos os lados. Todos correm desesperadamente pela saída.
+Sabba cospe fogo para todos os lados. Todos correm desesperadamente para a saída.
 Sabba: SE EU NÃO POSSO VER O SHOW, NINGUÉM PODERÁ!!!!
-Ana: Tem doido pra tudo, né? Vamos sossegar o facho da velha para continuar a ver o show.
+Ana: Tem doido pra tudo, né? Vamos sossegar o facho da velha, não tem como assistir ao show com ela varzeando.
 PARABENS VOCÊ DERROTOU O GRANDE DEMÔNIO!!
 Agora você e Ana podem curtir o show em paz
