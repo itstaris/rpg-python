@@ -1,12 +1,12 @@
-introdução
+[introdução]
 Você dorme tranquilamente em sua cama confortável, até que seu sono é interrompido por barulhos na janela.
-É um pombo correio cutucando o vidro, você abre a janela e pega uma carta que ele te trouxe
+É um pombo correio cutucando o vidro, você abre a janela e pega uma carta que ele te trouxe.
 “Olá, Thiago! Você não vai acreditar no que aconteceu!! Semana passada participei de um sorteio de ingressos para o show do incrível bardo Raffa… acabei ganhando!!!!”
 “Tive muita sorte, milhares de pessoas estavam participando! Bem, não esperava menos considerando que Raffa é o bardo mais famoso do continente! Seu carisma é inigualável…”
 “Enfim, chega de enrolação. Estou enviando esta carta para convidar você a assistir o show comigo! Ele acontecerá daqui 3 dias, caso tenha interesse, me encontre no centro da cidade de Tulipos.”
 A carta está assinada por “Ana”, uma amiga sua de longa data. O que você vai fazer?
 Você pega suas coisas e vai até Tulipos, a cidade das flores.
-TULIPOS
+[TULIPOS]
 Você enfim chega na cidade das flores. Ela não é conhecida assim a toa, em todos os cantos é possível ver uma infinidade de flores e outras plantas.
 Ao explorar várias ruas coloridas e cheias de vida, você encontra a praça central da cidade.
 Ana: Thiago! Estou aqui!
@@ -27,18 +27,18 @@ Wodak incansavelmente fala sobre ovelhas. Você não tem ideia do que ele está 
 Wodak: Se quiserem um futuro promissor assim, estou oferecendo um curso de como cuidar de ovelhas. Se comprarem agora posso fazer no precinho!
 Você e Ana caminham então pelo campo de plantação de milhos, uma área tranquila cheia de humildes agricultores.
 Andando bastante, encontram um esguio fazendeiro cuidando de sua plantação.
-[???]: Olá, viajantes! Prazer, eu sou o Jullin. Que incomum ver pessoas andando por aqui…
+???: Olá, viajantes! Prazer, eu sou o Jullin. Que incomum ver pessoas andando por aqui…
 Jullin fala de forma lenta e calma. Mesmo parecendo ser introvertido, ele exala simpatia.
 Ana: Prazer, Meu nome é Ana e esse é o Thiago. Estamos indo a Itapisópolis.
 Jullin: Itapisópolis?? Fiquei sabendo que vai rolar um evento dos grandes lá.
 Jullin: Bem, vocês parecem cansados… gostariam de comer um pouco dos meus milhos? Sempre bom fazer uma pausa para encher o buchin…
-PONTE DO GOBLIN
+[PONTE DO GOBLIN]
 Vocês adentram uma densa floresta mágica, conhecida pela presença de várias criaturas exóticas e diferenciadas.
 Aproximando-se de um riacho, percebem que há uma ponte que o corta, aparentemente o único meio de atravessar para o outro lado.
-[???]: Se os forasteiros quiserem atravessar, terão que responder minha charada.
+???: Se os forasteiros quiserem atravessar, terão que responder minha charada.
 Vocês escutam uma voz mansa e grave vinda da ponte. É de um grande goblin que desenha tranquilo em seu pequeno caderno.
 Ana: Quem é você?
-[???]: Sou Jânovisk, protetor desta ponte e guardião da floresta.
+???: Sou Jânovisk, protetor desta ponte e guardião da floresta.
 Ele diz isso enquanto faz um desenho grotesco e com muito sangue. Ele parece feliz com o resultado.
 Jânovisk: A charada é a seguinte a mãe de Mary teve quatro filhos. Abril, Maio e Junho foram os três primeiros. Qual o nome da 4ª criança?
 Jânovisk continua a desenhar de boa sem nem olhar para vocês.
@@ -48,15 +48,15 @@ Jânovisk: …..
 Thiago: Tá… então a gente não pode passar?
 Jânovisk: Hãã.. ah, sei lá. Façam o que quiserem, sou pago só para fazer charadas, não para impedir que passem na ponte.
 Você e Ana se entreolham confusos e atravessam a ponte mesmo assim.
-GURU
+[GURU]
 Seguindo seu caminho, vocês decidem descansar um pouco em uma taverna que encontraram na estrada.
 O que seria apenas um copo de bebida, acabou sendo mais de 20.
 [Cirrose adquirida!]
 Depois de uma forte ressaca, você e Ana acordam jogados em uma floresta desconhecida. Sua cabeça gira, mas você consegue perceber que está ao lado de uma cachoeira.
-[???]: Que deselegante os senhores jogados assim.
+???: Que deselegante os senhores jogados assim.
 Thiago: Quem está aí??
 Você vê uma sofisticada elfa sentada em uma pedra ao lado da cachoeira. Por alguma razão ela está tomando uma taça de vinho no meio da floresta.
-[???]: Prazer, sou Marilovis. Estava fazendo minha caminhada matinal quando vi os senhores completamente bêbados aqui jogados. Bebam a água da cachoeira, devem estar com sede.
+???: Prazer, sou Marilovis. Estava fazendo minha caminhada matinal quando vi os senhores completamente bêbados aqui jogados. Bebam a água da cachoeira, devem estar com sede.
 Ana: Ai, minha cabeça! Não tenho ideia de onde estamos… Você sabe onde fica Itapisópolis?
 Marilovis: Ah já sei, estão indo para lá por conta do grande show do bardo Raffa, certo? Que gosto refinado, meus caros… Bem, estamos agora na floresta Lemeni, há dois caminhos que poderão seguir.
 Marilovis: O primeiro são as Ruínas de Therezoca, uma rota tumultuosa e perigosa, porém curta. Já o segundo é o Labirinto de Romania, bem longo, mas seguro. Tenho um velho conhecido que pode guiá-los pelo labirinto.
@@ -66,14 +66,14 @@ Ana: Ok, acho que não foi tão ruim assim.
 Ana diz isso após seu dedo mindinho ter sido decepado. Ela tranquilamente trata de seu ferimento e vocês voltam a seguir seu caminho.
 Vocês chegam na frente do grande labirinto, suas paredes altas e cheias de musgo os impedem de ver o outro lado. Há um pequeno troll de aparência rabugenta sentado na entrada.
 Thiago: Saudações! Você é o antigo conhecido da Marilovis?
-[???]: Sou Abel. Quem chega?
-Ana: Olá, somos aventureiros e estamos indo para Itapisópolis. Acabamos encontrando Mariloves pela jornada e ela disse que havia alguém que poderia nos ajudar a passar pelo labirinto.
+???: Sou Abel. Quem chega?
+Ana: Olá, somos aventureiros e estamos indo para Itapisópolis. Acabamos encontrando Marilovis pela jornada e ela disse que havia alguém que poderia nos ajudar a passar pelo labirinto.
 Abel: Que folga…
 Abel os olha com desdém.
 Abel: A vida tá fácil assim, é? Vamos logo.
 Ainda que mal humorado, Abel ainda possui um carisma que conquista você. Os três andam pelo vasto labirinto enquanto conversam sobre a vida e questões filosóficas.
 Por mais que o assunto seja interessante, você sente que a conversa não acaba nunca. 
-ITAPISÓPOLIS
+[ITAPISÓPOLIS]
 Enfim, você e Ana chegam na capital.
 Ana: UFA! Finalmente estamos aqui!!! Mal posso esperar para ver Raffa em pessoa!!!!!
 Vocês correm empolgados para o local do show, ele fica na maior praça da cidade.
@@ -81,11 +81,11 @@ Após um certo tempo de espera, vocês entram na área VIP e aguardam a chegada 
 Quando ele chega ao palco, o público vai à loucura. Gritos de fãs descontrolados são ouvidos de todos os lados, algumas pessoas choram e outras rasgam suas próprias roupas.
 Ana: Mais um dia normal.
 Vocês curtem ao máximo o espetáculo de Raffa. Ele toca as clássicas “Sou de Itapiura” e sua favorita “Curtindo uma mexerica”. A diversão é tanta que mal puderam notar que algo sobrevoava o céu.
-[???]: BOA NOITE, VERMES!!!!
+???: BOA NOITE, VERMES!!!!
 Olhando com mais atenção, você percebe que a criatura no céu é a grande demônia Sabba, a degoladora.
 Sabba: QUEM FOI O INSOLENTE QUE ROUBOU O MEU INGRESSO??? ERA PARA EU TER GANHADO O SORTEIO!!!!
 Sabba cospe fogo para todos os lados. Todos correm desesperadamente pela saída.
 Sabba: SE EU NÃO POSSO VER O SHOW, NINGUÉM PODERÁ!!!!
 Ana: Tem doido pra tudo, né? Vamos sossegar o facho da velha para continuar a ver o show.
-PARABENS VOCÊ DERROTOU O GRANDE DEMONIO
+PARABENS VOCÊ DERROTOU O GRANDE DEMÔNIO!!
 Agora você e Ana podem curtir o show em paz

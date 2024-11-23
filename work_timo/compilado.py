@@ -4,18 +4,19 @@ import random
 
 #configuraçoes da janela
 menu = Tk()   
-menu.title("O ataque sabatico") 
-menu.geometry("1000x600" ) 
+menu.title("O ATAQUE SABÁTICO") 
+menu.geometry("1000x600") 
+menu.configure(bg="#322A2D")
 
 #TITULO DO MENU
-titulo = Label(menu, text="O ataque sabatico", font=("Arial", 12)) 
-titulo.grid(row=0, column=1) 
+#titulo = Label(menu, text="O ataque sabatico", font=("Arial", 12)) 
+#titulo.grid(row=0, column=1) 
 
 #Leitor do arquivo de texto
 meuArquivo = open("introducao.txt", "r", encoding="utf-8")
 minhasLinhasDeTexto = meuArquivo.readlines()
 
-#Variaveis
+#Variáveis
 contador = 0
 probabilidade_soco = 0.2
 probabilidade_chute = 0.9
@@ -23,7 +24,8 @@ life = 10
 life_enemy = 10
 vida_do_boss = 9
 tempo_de_espera = 10
-#Texto principal com o sisstema
+
+#Texto principal com o sistema
 def updateText():
 
   global contador
@@ -117,8 +119,8 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     bt_continuar.place_forget()
-    bt_comprar_curso.place(x=350, y=520)
-    bt_treta.place(x=750,y=520)
+    bt_comprar_curso.place(relx=0.33, rely=0.7, anchor="center")
+    bt_treta.place(relx=0.66, rely=0.7, anchor="center")
   if contador==27:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -173,10 +175,10 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     bt_continuar.place_forget()
-    bt_charada_errado1.place(x=500,y=400)
-    bt_charada_errado2.place(x=700,y=400)
-    bt_charada_certa.place(x=500,y=500)
-    bt_recorrer_a_violencia.place(x=700,y=500)
+    bt_charada_errado1.place(relx=0.33, rely=0.7, anchor="center")
+    bt_charada_errado2.place(relx=0.66, rely=0.7, anchor="center")
+    bt_charada_certa.place(relx=0.33, rely=0.9, anchor="center")
+    bt_recorrer_a_violencia.place(relx=0.66, rely=0.9, anchor="center")
   if contador==43:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -346,55 +348,54 @@ def updateText():
 #Primeiras opções
 def primeiraEscolha():
   bt_continuar.place_forget()
-  bt_dormir.place(x=350, y=520)
-  bt_ir_ao_show.place(x=750,y=520)
+  bt_dormir.place(relx=0.33, rely=0.7, anchor="center")
+  bt_ir_ao_show.place(relx=0.66, rely=0.7, anchor="center")
 
 def dormir():
   textoPrincipal.configure(text='Mesmo sendo uma oportunidade única, sua personalidade vagabunda e preguiçosa fala mais alta e você volta a dormir.')
-  bt_perdeu.place(x=450, y=420)
+  bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
   bt_dormir.place_forget()
   bt_ir_ao_show.place_forget()
 
 def irNoShow():
   textoPrincipal.configure(text='Não posso perder esse show!! Quem seria otário de perder a chance de ver o Raffa em carne e osso dando um espetáculo ao vivo!!???')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_dormir.place_forget()
   bt_ir_ao_show.place_forget()
 
 #Segunda opções
 def segundaEscolha():
   bt_continuar.place_forget()
-  bt_planice_verde.place(x=350, y=520)
-  bt_plantacao_milho.place(x=750,y=520)
+  bt_planice_verde.place(relx=0.33, rely=0.7, anchor="center")
+  bt_plantacao_milho.place(relx=0.66, rely=0.7, anchor="center")
 
 def planiceVerde():
   textoPrincipal.configure(text=f'PLANÍCIE ABERTA E VERDE')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
 
 def plantacaoMilho():
   global contador
   textoPrincipal.configure(text=f'CAMPO DE PLANTAÇÃO DE MILHO')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_planice_verde.place_forget()
   bt_plantacao_milho.place_forget()
   contador += 10
 def comerMilho():
   bt_recusar_milho.place_forget()
   bt_comer_milho.place_forget()
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   textoPrincipal.configure(text=f'Você e Ana aceitam e Jullin fica muito feliz. Vocês comem um milho. Dois, três, quatro… Vocês se entopem de milho o suficiente para perderem as contas. Jullin realmente faz um milho delícia.')
 def recusarMilho():
   bt_recusar_milho.place_forget()
   bt_comer_milho.place_forget()
-  bt_continuar.place(x=450, y=420)
-  textoPrincipal.configure(text=f'Você não tem tempo para perder com um caipira aleatório e recusa seu delicioso milho. Parabéns, você chateou um caipira triste!')
-
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
+  textoPrincipal.configure(text=f'Você não tem tempo para perder com um caipira aleatório e recusa seu delicioso milho. Parabéns, você chateou um pobre caipira simpático!')
 #Ponte opçoes
 def errado():
   textoPrincipal.configure(text=f'Jânovisk: Não não não. Completamente errado.')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_charada_errado1.place_forget()
   bt_charada_errado2.place_forget()
   bt_charada_certa.place_forget()
@@ -402,7 +403,7 @@ def errado():
 def recorrerAviolencia():
   textoPrincipal.configure(text=f'Você sabe que a violência nunca é a resposta, ela é a pergunta. E a resposta é sim. Em um pulo, você tenta atacar o grande goblin. Porém, com apenas uma mão, Jânovisk te segura pelo pescoço e o quebra sem qualquer esforço. Parabéns, você morreu nas mãos de um goblin preguiçoso!')
   global contador
-  bt_perdeu.place(x=450, y=420)
+  bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
   bt_charada_errado1.place_forget()
   bt_charada_errado2.place_forget()
   bt_charada_certa.place_forget()
@@ -411,7 +412,7 @@ def recorrerAviolencia():
 def acertou():  
   global contador
   textoPrincipal.configure(text=f'Jânovisk: É isso, acertou. Podem seguir seu caminho. Se sobreviverem…')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_charada_errado1.place_forget()
   bt_charada_errado2.place_forget()
   bt_charada_certa.place_forget()
@@ -423,29 +424,29 @@ def comprar_curso():
   bt_treta.place_forget()
   bt_comprar_curso.place_forget()
   textoPrincipal.configure(text=f'Wodak te convence e você gasta todo seu dinheiro comprando o curso. Sua lábia e persuasão são tão eficientes que te fizeram esquecer que não tem ovelhas. Parabéns, você comprou um curso inútil! [Curso inútil e pobreza adquiridos!]')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   contador += 7
   
 #Sistema de luta
 def tretando():
-    bt_chute.place(x=250,y=450)
-    bt_soco.place(x=750,y=450)
+    bt_chute.place(relx=0.33, rely=0.7, anchor="center")
+    bt_soco.place(relx=0.66, rely=0.7, anchor="center")
     bt_comprar_curso.place_forget()
     bt_treta.place_forget()
     bt_continuar.place_forget()
-    textoPrincipal.configure(text=f'Wodak esta na sua frente o que você faz?')  
+    textoPrincipal.configure(text=f'Você está quase sendo convencido, até que se lembra que nem ao menos tem ovelhas. Mesmo recusando educadamente, Wodak se enfurece e parte para cima. O que você faz?')  
 
 def status_da_luta():
     global life, life_enemy    
-    Vidas = Label(menu,text=f'Sua vida:{life} Vida do inimigo:{life_enemy}')
+    Vidas = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {life_enemy}')
     Vidas.place(x=100,y=100)
     if life > 0 and life_enemy <= 0:
         # print("Você ganhou!")
-        textoPrincipal.configure(text=f'Você ganhou!')
+        textoPrincipal.configure(text=f'Você dá um sarrafo em Wodak e ganha a luta! Felizmente não caiu na lábia de um desconhecido...')
         bt_chute.place_forget()
         bt_soco.place_forget()
         
-        bt_continuar.place(x=450, y=420)
+        bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
         menu.update_idletasks()
         Vidas.place_forget()
         contador == 29
@@ -453,7 +454,7 @@ def status_da_luta():
         bt_chute.place_forget()
         bt_soco.place_forget()
         textoPrincipal.configure(text=f'Você perdeu!')
-        bt_perdeu.place(x=800, y=100)
+        bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
     # else:
     #     textP.configure(text=f'O jogo continua')
     
@@ -465,13 +466,13 @@ def socar():
         dano = random.randint(1,4)
         life_enemy -= dano
         # print(f'voce acertou o inimigo e deu {dano} de dano')
-        textoPrincipal.configure(text=f'Vc deu um soco no inimigo e deu {dano} de dano, porem ele revida e da 2 de dano')
+        textoPrincipal.configure(text=f'Você deu um soco no inimigo e deu {dano} de dano, porém ele revida e dá 2 de dano!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()
     else:
         # print("Vc errouuu")
-        textoPrincipal.configure(text=f'Você errouu e ainda levou um tapa do Wodak -2 de vida')
+        textoPrincipal.configure(text=f'Você erra e ainda leva um tapa do Wodak, perdendo 2 de vida!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()  
@@ -482,13 +483,13 @@ def chutar():
         dano = random.randint(2,8)
         life_enemy -= dano
         # print(f'voce acertou o inimigo e deu {dano} de dano')
-        textoPrincipal.configure(text=f'Vc deu um chute no inimigo e deu {dano} de dano, porém ele revida e da 2 de dano')
+        textoPrincipal.configure(text=f'Você dá um chute no inimigo e o tira {dano} de vida, porém ele revida e dá 2 de dano!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()
     else:
         # print("Vc errouuu")
-        textoPrincipal.configure(text=f'Você errouu e ainda levou um tapa do Wodak -2 de vida')
+        textoPrincipal.configure(text=f'Você erra e ainda leva um tapa do Wodak, perdendo 2 de vida!')
         life -= 2 
         # print(f'Wodak te atacou e vc perdeu 2 de vida')
         status_da_luta()  
@@ -500,8 +501,8 @@ def luta_final():
   life=10
   bt_luta_final.place_forget()
   bt_continuar.place_forget()
-  bt_rasteira2.place(x=250,y=450)
-  bt_peteleco2.place(x=750,y=450)
+  bt_rasteira2.place(relx=0.33, rely=0.7, anchor="center")
+  bt_peteleco2.place(relx=0.66, rely=0.7, anchor="center")
   # bt_caixa_dagua.place(x=500,y=500)
   textoPrincipal.configure(text=f'O grande demonio esta a sua frente o que você faz?')
   menu.update_idletasks()
@@ -517,16 +518,16 @@ def status_do_boss():
     bt_peteleco2.place_forget() 
     bt_caixa_dagua.place_forget()
     Vidas.place_forget()
-    bt_continuar.place(x=450, y=420)
+    bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
     esquecer()
   elif life <= 0:
     bt_rasteira2.place_forget()
     bt_peteleco2.place_forget()
     textoPrincipal.configure(text=f'Você perdeu!')
     bt_caixa_dagua.place_forget()
-    bt_perdeu.place(x=800, y=100)
+    bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
   if life < 3:
-    bt_caixa_dagua.place(x=500,y=500)
+    bt_caixa_dagua.place(relx=0.5, rely=0.7, anchor="center")
   menu.update_idletasks()
 
 def rasteira2():
@@ -534,11 +535,11 @@ def rasteira2():
     if random.random() < probabilidade_chute:
         dano2 = random.randint(7,8)
         vida_do_boss -= dano2
-        textoPrincipal.configure(text=f'Vc deu uma rasteira no inimigo e deu {dano2} de dano, porém ela cospe em vc e da 3 de dano')
+        textoPrincipal.configure(text=f'Você dá uma rasteira em Sabba e a faz perder {dano2} de vida, porém ela cospe em você e dá 3 de dano!')
         life -= 3 
         status_do_boss()
     else:
-        textoPrincipal.configure(text=f'Você errouu e ainda levou uma catarrada de fogo. *-3 de vida')
+        textoPrincipal.configure(text=f'Você erra e ainda leva uma catarrada de fogo, perdendo 3 de vida!')
         life -= 3
         status_do_boss()
 
@@ -547,18 +548,18 @@ def peteleco2():
     if random.random() < probabilidade_soco:
         dano2 = random.randint(1,4)
         vida_do_boss -= dano2
-        textoPrincipal.configure(text=f'Vc deu um peteleco no inimigo e deu {dano2} de dano, porém ela cospe em vc e da 3 de dano')
+        textoPrincipal.configure(text=f'Você dá um peteleco em Sabba e a faz perder {dano2} de vida, porém ela cospe em você e dá 3 de dano!')
         life -= 3 
         status_do_boss()
     else:
-        textoPrincipal.configure(text=f'Você errouu e ainda levou uma catarrada de fogo. *-3 de vida')
+        textoPrincipal.configure(text=f'Você errouu e ainda levou uma catarrada de fogo, perdendo 3 de vida!')
         life -= 3
         status_do_boss()    
 
 def caixa_dagua():
   global life,vida_do_boss
   vida_do_boss -= 100
-  textoPrincipal.configure(text=f"Você pega a super caixa d'agua e arremessa no grande demonio e derrota ela ")
+  textoPrincipal.configure(text=f"Você pega a super caixa d'agua e arremessa no grande demônio, enfim a derrotando!!!")
   bt_caixa_dagua.place_forget()
   status_do_boss()
 
@@ -568,13 +569,13 @@ def esquecer():
 #terceira opçao
 def terceiraEscolha():
   bt_continuar.place_forget()
-  bt_therezoca.place(x=350, y=520)
-  bt_romania.place(x=750, y=520)
+  bt_therezoca.place(relx=0.33, rely=0.7, anchor="center")
+  bt_romania.place(relx=0.66, rely=0.7, anchor="center")
 
 def therezoca():
   global contador
   textoPrincipal.configure(text=f'RUÍNAS DE THEREZOCA')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_therezoca.place_forget()
   bt_romania.place_forget()
 
@@ -582,51 +583,51 @@ def romania():
   global contador
   contador += 6
   textoPrincipal.configure(text='LABIRINTO DE ROMANIA')
-  bt_continuar.place(x=450, y=420)
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
   bt_therezoca.place_forget()
   bt_romania.place_forget()
 
 def esperando():
   global tempo_de_espera
   tempo_de_espera=tempo_de_espera-1
-  txt_de_espera.place(x=100,y=100)
+  txt_de_espera.place(relx=0.5, rely=0.2, anchor="center")
   if tempo_de_espera<0:
     return
   textoPrincipal.config(text=str(tempo_de_espera))
   textoPrincipal.after(1000,esperando)
   if tempo_de_espera == 0:
-    bt_continuar.place(x=450, y=420)
+    bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
     txt_de_espera.place_forget()
 
 
 #Botoes do sistema de luta
-bt_soco=Button(menu,text="soco", command=socar)
-bt_chute=Button(menu,text="chute", command=chutar)
-bt_treta=Button(menu,text="treta", command=tretando)
+bt_soco=Button(menu,text="soco", command=socar, font=("Cambria", 14), bg="#272022", fg="white")
+bt_chute=Button(menu,text="chute", command=chutar, font=("Cambria", 14), bg="#272022", fg="white")
+bt_treta=Button(menu,text="treta", command=tretando, font=("Cambria", 14), bg="#272022", fg="white")
 
 
 #Botoes de escolhas
-bt_dormir = Button(menu, text='Voltar a dormir',command=dormir)
-bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow)
-bt_planice_verde = Button(menu,text=f'Planices verdes',command=planiceVerde)
-bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho)
-bt_therezoca = Button(menu,text='Ruínas de Therezoca',command=therezoca)
-bt_romania = Button(menu,text='Labirinto de Romania',command=romania)
+bt_dormir = Button(menu, text='Voltar a dormir',command=dormir, font=("Cambria", 14), bg="#272022", fg="white")
+bt_ir_ao_show = Button(menu,text='Ir ao show',command= irNoShow, font=("Cambria", 14), bg="#272022", fg="white")
+bt_planice_verde = Button(menu,text=f'Planícies verdes',command=planiceVerde, font=("Cambria", 14), bg="#272022", fg="white")
+bt_plantacao_milho = Button(menu,text=f'Plantação de milho',command=plantacaoMilho, font=("Cambria", 14), bg="#272022", fg="white")
+bt_therezoca = Button(menu,text='Ruínas de Therezoca',command=therezoca, font=("Cambria", 14), bg="#272022", fg="white")
+bt_romania = Button(menu,text='Labirinto de Romania',command=romania, font=("Cambria", 14), bg="#272022", fg="white")
 
 #Botoes de subescolha
-bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso)
-bt_comer_milho = Button(menu,text=f'Comer milho',command=comerMilho)
-bt_recusar_milho = Button(menu,text=f'Recusar milho',command=recusarMilho)
-bt_charada_errado1 = Button(menu,text="Março",command=errado)
-bt_charada_errado2 = Button(menu,text="Julho",command=errado)
-bt_charada_certa = Button(menu,text=f'Mary',command=acertou)
-bt_recorrer_a_violencia = Button(menu,text=f'Atacar janovisk',command=recorrerAviolencia)
+bt_comprar_curso = Button(menu,text='Comprar curso',command=comprar_curso, font=("Cambria", 14), bg="#272022", fg="white")
+bt_comer_milho = Button(menu,text=f'Comer milho',command=comerMilho, font=("Cambria", 14), bg="#272022", fg="white")
+bt_recusar_milho = Button(menu,text=f'Recusar milho',command=recusarMilho, font=("Cambria", 14), bg="#272022", fg="white")
+bt_charada_errado1 = Button(menu,text="Março",command=errado, font=("Cambria", 14), bg="#272022", fg="white")
+bt_charada_errado2 = Button(menu,text="Julho",command=errado, font=("Cambria", 14), bg="#272022", fg="white")
+bt_charada_certa = Button(menu,text=f'Mary',command=acertou, font=("Cambria", 14), bg="#272022", fg="white")
+bt_recorrer_a_violencia = Button(menu,text=f'Atacar janovisk',command=recorrerAviolencia, font=("Cambria", 14), bg="#272022", fg="white")
 
 
 #Botao principal
-bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="")
-bt_continuar.place(x=450, y=420)
-bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit)
+bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="", font=("Cambria", 14), bg="#272022", fg="white", padx=30, pady=5)
+bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
+bt_perdeu = Button(menu,text=f'Perdeu',command=menu.quit, font=("Cambria", 14), bg="#272022", fg="white", padx=5)
 
 txt_de_espera = Label (menu,text="Agora vc deve esperar o tempo passar")
 
@@ -642,6 +643,6 @@ bt_skip= Button(menu,text="skip",command=skip)
 bt_skip.place(x=900,y=100)
 
 
-textoPrincipal = Label(menu,text="INTRODUÇÃO",font=("Arial", 12),wraplength=300,justify="left")
+textoPrincipal = Label(menu,text="O INÍCIO",font=("Georgia", 16),wraplength=500,justify="center")
 textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
 menu.mainloop()
