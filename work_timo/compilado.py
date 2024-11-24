@@ -1,17 +1,20 @@
 from tkinter import *
 import time
 import random
-from customtkinter import *
 
 #configuraçoes da janela
 menu = Tk()   
 menu.title("O ATAQUE SABÁTICO") 
 menu.geometry("1000x600") 
 menu.configure(bg="#322A2D")
+menu.iconbitmap("sabba.ico")
 
-#TITULO DO MENU
-#titulo = Label(menu, text="O ataque sabatico", font=("Arial", 12)) 
-#titulo.grid(row=0, column=1) 
+#CORES
+#marrom claro #322A2D
+#marrom escuro #272022
+#amarelo #EADBA7
+
+caixa_texto = Canvas(menu, width=525, height=200, bg="#EADBA7", highlightthickness=0)
 
 #Leitor do arquivo de texto
 meuArquivo = open("introducao.txt", "r", encoding="utf-8")
@@ -19,18 +22,22 @@ minhasLinhasDeTexto = meuArquivo.readlines()
 
 #Variáveis
 contador = 0
-probabilidade_soco = 0.2
-probabilidade_chute = 0.9
+probabilidade_soco = 0.8
+probabilidade_chute = 0.65
 life = 10
 life_enemy = 10
-vida_do_boss = 9
-tempo_de_espera = 10
+vida_do_boss = 99
+tempo_de_espera = 5
+
+Vidas = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {life_enemy}', font=("Georgia", 12),wraplength=500,justify="left", fg="#272022", bg="#EADBA7")
+Vidas2 = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {vida_do_boss}',font=("Georgia", 12),wraplength=500,justify="left", fg="#272022", bg="#EADBA7")
 
 #Texto principal com o sistema
 def updateText():
 
   global contador
   contador+=1
+
   if contador==0:
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
 
@@ -178,8 +185,8 @@ def updateText():
     bt_continuar.place_forget()
     bt_charada_errado1.place(relx=0.33, rely=0.7, anchor="center")
     bt_charada_errado2.place(relx=0.66, rely=0.7, anchor="center")
-    bt_charada_certa.place(relx=0.33, rely=0.9, anchor="center")
-    bt_recorrer_a_violencia.place(relx=0.66, rely=0.9, anchor="center")
+    bt_charada_certa.place(relx=0.33, rely=0.85, anchor="center")
+    bt_recorrer_a_violencia.place(relx=0.66, rely=0.85, anchor="center")
   if contador==43:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
@@ -280,6 +287,7 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     esperando()
+    txt_de_espera.place(relx=0.5, rely=0.3, anchor="center")
     bt_continuar.place_forget()
   if contador==75:
   
@@ -329,22 +337,16 @@ def updateText():
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
     luta_final()
-    menu.update_idletasks()
-    bt_caixa_dagua.place_forget()
+
   if contador==90:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-    bt_caixa_dagua.place_forget()
+
   if contador==91:
   
     textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-    bt_caixa_dagua.place_forget()
-    
-  if contador==92:
-  
-    textoPrincipal.configure(text=minhasLinhasDeTexto[contador])
-    bt_caixa_dagua.place_forget()
-    
+    bt_continuar.place_forget()
+    bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
 
 #Primeiras opções
 def primeiraEscolha():
@@ -436,11 +438,11 @@ def tretando():
     bt_treta.place_forget()
     bt_continuar.place_forget()
     textoPrincipal.configure(text=f'Você está quase sendo convencido, até que se lembra que nem ao menos tem ovelhas. Mesmo recusando educadamente, Wodak se enfurece e parte para cima. O que você faz?')  
+    Vidas.place(relx=0.15, rely=0.22, anchor="center")
 
 def status_da_luta():
-    global life, life_enemy    
-    Vidas = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {life_enemy}')
-    Vidas.place(x=100,y=100)
+    global life, life_enemy, contador
+    Vidas.configure(text=f'Sua vida: {life} \nVida do inimigo: {life_enemy}')
     if life > 0 and life_enemy <= 0:
         # print("Você ganhou!")
         textoPrincipal.configure(text=f'Você dá um sarrafo em Wodak e ganha a luta! Felizmente não caiu na lábia de um desconhecido...')
@@ -451,7 +453,7 @@ def status_da_luta():
         bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
         menu.update_idletasks()
         Vidas.place_forget()
-        contador == 29
+        contador+=7
     elif life <= 0:
         bt_chute.place_forget()
         bt_soco.place_forget()
@@ -506,21 +508,21 @@ def luta_final():
   bt_peteleco2.place(relx=0.66, rely=0.7, anchor="center")
   # bt_caixa_dagua.place(x=500,y=500)
   textoPrincipal.configure(text=f'O grande demônio está a sua frente, o que você faz?')
-  menu.update_idletasks()
+  Vidas.place_forget()
+  Vidas2.place(relx=0.15, rely=0.22, anchor="center")
 
 
 def status_do_boss():
   global life, vida_do_boss 
-  Vidas = Label(menu,text=f'Sua vida:{life} Vida do inimigo:{vida_do_boss}')
-  Vidas.place(x=100,y=100)
+  Vidas2.configure(text=f'Sua vida:{life} \nVida do inimigo:{vida_do_boss}')
 
   if life > 0 and vida_do_boss <= 0:
     bt_rasteira2.place_forget()
     bt_peteleco2.place_forget() 
-    bt_caixa_dagua.place_forget()
-    Vidas.place_forget()
-    bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
     esquecer()
+    Vidas2.place_forget()
+    bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
+    #textoPrincipal.configure(text=f'PARABÉNS, VOCÊ DERROTOU O GRANDE DEMÔNIO!!')
   elif life <= 0:
     bt_rasteira2.place_forget()
     bt_peteleco2.place_forget()
@@ -528,13 +530,12 @@ def status_do_boss():
     bt_caixa_dagua.place_forget()
     bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
   if life < 3:
-    bt_caixa_dagua.place(relx=0.5, rely=0.7, anchor="center")
-  menu.update_idletasks()
+    bt_caixa_dagua.place(relx=0.5, rely=0.85, anchor="center")
 
 def rasteira2():
     global life, vida_do_boss
     if random.random() < probabilidade_chute:
-        dano2 = random.randint(7,8)
+        dano2 = random.randint(2,8)
         vida_do_boss -= dano2
         textoPrincipal.configure(text=f'Você dá uma rasteira em Sabba e a faz perder {dano2} de vida, porém ela cospe em você e dá 3 de dano!')
         life -= 3 
@@ -561,7 +562,7 @@ def caixa_dagua():
   global life,vida_do_boss
   vida_do_boss -= 100
   textoPrincipal.configure(text=f"Você pega a super caixa d'agua e arremessa no grande demônio, enfim a derrotando!!!")
-  bt_caixa_dagua.place_forget()
+  bt_caixa_dagua.after(1, esquecer)
   status_do_boss()
 
 def esquecer():
@@ -591,7 +592,7 @@ def romania():
 def esperando():
   global tempo_de_espera
   tempo_de_espera=tempo_de_espera-1
-  txt_de_espera.place(relx=0.5, rely=0.2, anchor="center")
+  
   if tempo_de_espera<0:
     return
   textoPrincipal.config(text=str(tempo_de_espera))
@@ -627,11 +628,32 @@ bt_recorrer_a_violencia = Button(menu,text=f'Atacar janôvisk',command=recorrerA
 
 #Botao principal
 bt_continuar = Button(menu, text = 'Continuar', command = updateText, image="", font=("Cambria", 14), bg="#272022", fg="white", padx=30, pady=5)
-bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
+#bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
 bt_perdeu = Button(menu,text=f'Fim',command=menu.quit, font=("Cambria", 14), bg="#272022", fg="white", padx=30, pady=5)
 
-txt_de_espera = Label(menu,text="O caminho é tão longo que chega a ser interminável.", font=("Georgia", 12), wraplength=500, justify="center")
+textoPrincipal = Label(menu,text="[O INÍCIO]",font=("Georgia", 16),wraplength=500,justify="center", fg="#272022", bg="#EADBA7")
 
+#Start
+def comecar():
+  bt_continuar.place(relx=0.5, rely=0.7, anchor="center")
+  bt_start.place_forget()
+  titulo.place_forget()
+  textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
+  caixa_texto.place(relx=0.5, rely=0.35, anchor="center")
+
+bt_start = Button(menu, text = 'Jogar', command = comecar, image="", font=("Cambria", 20), bg="#272022", fg="white", padx=40, pady=10)
+bt_start.place(relx=0.5, rely=0.7, anchor="center")
+
+titulo = Label(menu, text="O ATAQUE SABÁTICO",font=("Georgia", 50), wraplength=500,justify="center", fg="#EADBA7", bg="#322A2D")
+titulo.place(relx=0.5, rely=0.45, anchor="center")
+
+creditos = Label(menu, text="Desenvolvido por:\nTimo\nTamires", font=("Georgia", 10), wraplength=500,justify="left", fg="#EADBA7", bg="#322A2D" )
+creditos.place(relx=0.1, rely=0.9, anchor="center")
+
+#espera no labirinto
+txt_de_espera = Label(menu,text="Você sente na pele a demora para chegar no fim do labirinto...",font=("Georgia", 12),wraplength=500,justify="center", fg="#272022", bg="#EADBA7")
+
+#luta
 bt_luta_final = Button(menu,text="Treta final",command=luta_final)
 bt_rasteira2 = Button(menu,text="Rasteira",command=rasteira2, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 bt_peteleco2 = Button(menu,text="Peteleco",command=peteleco2, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
@@ -643,7 +665,4 @@ def skip():
 bt_skip= Button(menu,text="skip",command=skip)
 bt_skip.place(x=900,y=100)
 
-
-textoPrincipal = Label(menu,text="[O INÍCIO]",font=("Georgia", 16),wraplength=500,justify="center")
-textoPrincipal.place(relx=0.5, rely=0.35, anchor="center")
 menu.mainloop()
