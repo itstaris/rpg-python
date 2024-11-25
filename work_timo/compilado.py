@@ -27,7 +27,7 @@ probabilidade_chute = 0.65
 life = 10
 life_enemy = 10
 vida_do_boss = 99
-tempo_de_espera = 5
+tempo_de_espera = 150
 
 Vidas = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {life_enemy}', font=("Georgia", 12),wraplength=500,justify="left", fg="#272022", bg="#EADBA7")
 Vidas2 = Label(menu,text=f'Sua vida: {life} \nVida do inimigo: {vida_do_boss}',font=("Georgia", 12),wraplength=500,justify="left", fg="#272022", bg="#EADBA7")
@@ -659,10 +659,12 @@ bt_rasteira2 = Button(menu,text="Rasteira",command=rasteira2, font=("Cambria", 1
 bt_peteleco2 = Button(menu,text="Peteleco",command=peteleco2, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 bt_caixa_dagua = Button(menu,text="SUPER CAIXA D'ÁGUA",command=caixa_dagua, font=("Cambria", 14), bg="#272022", fg="white", width=25, pady=6)
 
+'''
 def skip():
   global contador
   contador += 88
 bt_skip= Button(menu,text="skip",command=skip)
 bt_skip.place(x=900,y=100)
+'''
 
 menu.mainloop()

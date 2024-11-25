@@ -1,16 +1,16 @@
-import pygame
+import tkinter as tk
+import subprocess
 
-pygame.init()
+def reproduzir_video():
+    caminho_video = "raffa_o_bardo"
+    comando_player = ["wmplayer.exe", caminho_video]
+    subprocess.call(comando_player)
 
-# Substitua 'meu_video.mp4' pelo caminho completo do seu arquivo
-video = pygame.movie.Movie("raffa_o_bardo.mp4")
-screen = pygame.display.set_mode(video.get_size())
-video.play()
+# Criar a janela Tkinter
+root = tk.Tk()
 
-while video.get_busy():
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-    screen.blit(video, (0, 0))
-    pygame.display.flip()
+# Criar um botão para iniciar a reprodução
+botao = tk.Button(root, text="Reproduzir Vídeo", command=reproduzir_video)
+botao.pack()
+
+root.mainloop()
