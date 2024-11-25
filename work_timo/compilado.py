@@ -527,9 +527,8 @@ def status_do_boss():
     bt_rasteira2.place_forget()
     bt_peteleco2.place_forget()
     textoPrincipal.configure(text=f'Você perdeu!')
-    bt_caixa_dagua.place_forget()
+    bt_caixa_dagua.after(1, esquecer)
     bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
-    esquecer()
   if life < 3:
     bt_caixa_dagua.place(relx=0.5, rely=0.85, anchor="center")
 
