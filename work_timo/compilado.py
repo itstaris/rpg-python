@@ -355,7 +355,7 @@ def primeiraEscolha():
   bt_ir_ao_show.place(relx=0.66, rely=0.7, anchor="center")
 
 def dormir():
-  textoPrincipal.configure(text='Mesmo sendo uma oportunidade única, sua personalidade vagabunda e preguiçosa fala mais alta e você volta a dormir.')
+  textoPrincipal.configure(text='Mesmo sendo uma oportunidade única, sua personalidade vagabunda e preguiçosa fala mais alto e você volta a dormir.')
   bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
   bt_dormir.place_forget()
   bt_ir_ao_show.place_forget()
@@ -529,6 +529,7 @@ def status_do_boss():
     textoPrincipal.configure(text=f'Você perdeu!')
     bt_caixa_dagua.place_forget()
     bt_perdeu.place(relx=0.5, rely=0.7, anchor="center")
+    esquecer()
   if life < 3:
     bt_caixa_dagua.place(relx=0.5, rely=0.85, anchor="center")
 
