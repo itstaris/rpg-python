@@ -3,7 +3,7 @@ Este é um projeto que foi desenvolvido por estudantes de Design de Digital da F
 
 ## DESENVOLVEDORES
 - [Artêmio (Timo)](https://github.com/Thaymoz)
-- [Tamires)](https://github.com/itstaris)
+- [Tamires](https://github.com/itstaris)
 
 ## PROPOSTA
 Individualmente ou em duplas, criar um trabalho simples em Python, utilizando os conceitos vistos no curso. Exemplos incluem agendas, gravações de logs de usuário, calculadoras, jogos interativos, organizadores de arquivos, etc.
